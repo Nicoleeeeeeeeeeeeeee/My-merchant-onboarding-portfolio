@@ -1,0 +1,5 @@
+stage,merchants,lead_to_stage_pct,stage_conversion_pct
+Lead,1200,100.0,100.0
+Qualified,884,73.7,73.7
+Approved,696,58.0,78.7
+Activated,562,46.8,80.7

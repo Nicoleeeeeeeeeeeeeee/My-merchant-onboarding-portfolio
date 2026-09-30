@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merchant Onboarding Funnel Diagnostics</title>
+  <style>
+    :root { font-family: Inter, Aptos, Arial, sans-serif; color: #17212b; background: #eef2f4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { padding: 22px 30px; display: flex; align-items: end; justify-content: space-between; background: #17212b; color: white; }
+    h1 { margin: 0; font-size: 27px; letter-spacing: 0; }
+    header p { margin: 5px 0 0; color: #b8c5cc; }
+    header span { font-size: 12px; color: #55c2a3; font-weight: 700; }
+    main { max-width: 1320px; margin: 0 auto; padding: 22px; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 14px; }
+    .kpi, .panel { background: white; border: 1px solid #d5dde1; border-radius: 5px; }
+    .kpi { min-height: 104px; padding: 18px; border-top: 4px solid #087c61; }
+    .label { color: #60717b; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+    .value { margin-top: 9px; font-size: 30px; font-weight: 750; }
+    .layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; }
+    .panel { padding: 20px; min-height: 300px; }
+    h2 { margin: 0 0 18px; font-size: 16px; letter-spacing: 0; }
+    .funnel-row { display: grid; grid-template-columns: 90px 1fr 55px; gap: 10px; align-items: center; margin: 14px 0; }
+    .track { height: 28px; background: #edf1f3; }
+    .bar { height: 100%; background: #087c61; }
+    .bar.secondary { background: #3c78a8; }
+    .retention { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: end; height: 190px; border-bottom: 1px solid #9aa8b0; padding: 0 14px; }
+    .retention div { position: relative; background: #3c78a8; min-width: 40px; }
+    .retention b { position: absolute; width: 100%; top: -25px; text-align: center; }
+    .retention span { position: absolute; width: 100%; bottom: -28px; text-align: center; font-size: 12px; }
+    .wide { grid-column: 1 / -1; min-height: 220px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e0e6e9; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { color: #60717b; font-size: 11px; text-transform: uppercase; }
+    .low { color: #b03333; font-weight: 700; }
+    footer { padding: 0 22px 22px; max-width: 1320px; margin: 0 auto; color: #60717b; font-size: 12px; }
+    @media (max-width: 800px) { .kpis { grid-template-columns: repeat(2, 1fr); } .layout { grid-template-columns: 1fr; } .wide { grid-column: auto; overflow-x: auto; } header { align-items: flex-start; gap: 12px; flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div><h1>Merchant Onboarding Funnel Diagnostics</h1><p>2025 synthetic lead cohorts · descriptive analysis</p></div>
+    <span>PORTFOLIO PREVIEW</span>
+  </header>
+  <main>
+    <section class="kpis" aria-label="Key performance indicators">
+      <div class="kpi"><div class="label">Total leads</div><div class="value">1,200</div></div>
+      <div class="kpi"><div class="label">Activation rate</div><div class="value">46.8%</div></div>
+      <div class="kpi"><div class="label">Median time to activate</div><div class="value">12 days</div></div>
+      <div class="kpi"><div class="label">90-day retained</div><div class="value">88.4%</div></div>
+    </section>
+    <section class="layout">
+      <article class="panel">
+        <h2>Onboarding funnel</h2>
+        <div class="funnel-row"><span>Lead</span><div class="track"><div class="bar" style="width:100%"></div></div><b>1,200</b></div>
+        <div class="funnel-row"><span>Qualified</span><div class="track"><div class="bar" style="width:73.7%"></div></div><b>884</b></div>
+        <div class="funnel-row"><span>Approved</span><div class="track"><div class="bar" style="width:58%"></div></div><b>696</b></div>
+        <div class="funnel-row"><span>Activated</span><div class="track"><div class="bar" style="width:46.8%"></div></div><b>562</b></div>
+      </article>
+      <article class="panel">
+        <h2>Retention after activation</h2>
+        <div class="retention">
+          <div style="height:95.7%"><b>95.7%</b><span>30 days</span></div>
+          <div style="height:92%"><b>92.0%</b><span>60 days</span></div>
+          <div style="height:88.4%"><b>88.4%</b><span>90 days</span></div>
+        </div>
+      </article>
+      <article class="panel wide">
+        <h2>Channel and segment focus</h2>
+        <table>
+          <thead><tr><th>Group</th><th>Leads</th><th>Activated</th><th>Activation rate</th><th>Avg days</th></tr></thead>
+          <tbody>
+            <tr><td>Partner · SME</td><td>106</td><td>58</td><td>54.7%</td><td>11.4</td></tr>
+            <tr><td>Partner · Micro</td><td>175</td><td>91</td><td>52.0%</td><td>11.5</td></tr>
+            <tr><td>Direct · SME</td><td>159</td><td>80</td><td>50.3%</td><td>13.2</td></tr>
+            <tr><td>Paid Search · SME</td><td>113</td><td>47</td><td>41.6%</td><td>12.3</td></tr>
+            <tr><td>Paid Search · Micro</td><td>182</td><td>66</td><td class="low">36.3%</td><td>13.4</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <footer>Source: deterministic synthetic data. Monthly activity is used as a 30/60/90-day retention proxy. Preview totals should match the Power BI report.</footer>
+</body>
+</html>

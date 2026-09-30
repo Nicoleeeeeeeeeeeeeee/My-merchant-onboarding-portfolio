@@ -1,0 +1,6 @@
+Case ID,Client type,Status,Document gap,Owner,SLA days,Escalation reason,Next action
+CASE-001,Hypothetical HK private company,Documents outstanding,Business registration copy,Onboarding coordinator,2,None,Send reminder and set due date
+CASE-002,Hypothetical overseas subsidiary,Completeness review,None,Onboarding coordinator,2,Non-standard ownership structure,Route to compliance for guidance
+CASE-003,Hypothetical e-commerce merchant,Compliance review,None,Compliance reviewer,5,High-risk country indicator in fictional profile,Document rationale and decision
+CASE-004,Hypothetical professional-services firm,Activation pending,None,Operations,1,None,Activate only after recorded approval
+CASE-005,Hypothetical dormant client,Periodic review due,Updated ownership declaration,Relationship owner,10,Trigger event: ownership change,Collect update and escalate if overdue

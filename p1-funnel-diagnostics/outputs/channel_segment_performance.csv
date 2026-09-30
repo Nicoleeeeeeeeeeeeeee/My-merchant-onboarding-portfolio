@@ -1,0 +1,13 @@
+channel,segment,leads,activated_merchants,activation_rate_pct,avg_days_to_activate,avg_monthly_orders
+Referral,Enterprise,12,7,58.3,17.6,455.1
+Partner,SME,106,58,54.7,11.4,144.8
+Partner,Enterprise,28,15,53.6,13.7,456.9
+Referral,SME,62,33,53.2,13.6,142.7
+Partner,Micro,175,91,52.0,11.5,42.5
+Direct,SME,159,80,50.3,13.2,133.0
+Referral,Micro,88,41,46.6,12.3,39.8
+Paid Search,Enterprise,37,17,45.9,13.7,405.6
+Direct,Micro,202,91,45.0,13.8,41.1
+Direct,Enterprise,36,16,44.4,17.3,409.8
+Paid Search,SME,113,47,41.6,12.3,126.6
+Paid Search,Micro,182,66,36.3,13.4,41.8

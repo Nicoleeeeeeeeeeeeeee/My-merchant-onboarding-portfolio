@@ -1,0 +1,4 @@
+Defect ID,Found in,Description,Severity,Fix,Retest
+D-001,TC-011,Values with surrounding whitespace were initially treated as empty,Medium,Trim values before required-field and format checks,Passed
+D-002,TC-012,Reset cleared inputs but left previous status visible,Low,Reset result panel in reset event callback,Passed
+D-003,TC-014,Long title and action button overflowed the narrow viewport,Medium,Allow flex/grid children to shrink and wrap mobile actions,Passed

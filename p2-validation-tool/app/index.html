@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merchant Onboarding Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Independent simulated UAT prototype</p>
+      <h1>Merchant Onboarding Validation</h1>
+    </div>
+    <span class="environment">SYNTHETIC DATA ONLY</span>
+  </header>
+  <main>
+    <form id="merchant-form" novalidate>
+      <section aria-labelledby="merchant-details">
+        <h2 id="merchant-details">Merchant details</h2>
+        <div class="grid">
+          <label>Registered name<input id="registeredName" autocomplete="organization"></label>
+          <label>Business registration number<input id="businessRegistrationNumber" inputmode="numeric" maxlength="8"></label>
+          <label>Business type
+            <select id="businessType"><option value="">Select</option><option>Retail</option><option>Food &amp; Beverage</option><option>Professional Services</option><option>E-commerce</option></select>
+          </label>
+          <label>Country of registration
+            <select id="country"><option value="">Select</option><option>Hong Kong</option><option>Singapore</option><option>United Kingdom</option><option>Australia</option></select>
+          </label>
+          <label>Contact name<input id="contactName" autocomplete="name"></label>
+          <label>Email<input id="email" type="email" autocomplete="email"></label>
+          <label>Expected monthly volume (HKD)<input id="expectedMonthlyVolume" type="number" min="1" step="1"></label>
+        </div>
+      </section>
+      <section aria-labelledby="documents">
+        <h2 id="documents">Document checklist</h2>
+        <div class="checks">
+          <label><input id="hasBusinessRegistration" type="checkbox"> Business registration copy</label>
+          <label><input id="hasOwnershipDeclaration" type="checkbox"> Ownership declaration</label>
+          <label><input id="hasAuthorisationEvidence" type="checkbox"> Authorisation evidence</label>
+        </div>
+      </section>
+      <div class="actions">
+        <button type="reset" class="secondary">Clear</button>
+        <button type="submit">Validate application</button>
+      </div>
+    </form>
+    <aside id="result" aria-live="polite" data-status="idle">
+      <p class="result-label">ONBOARDING STATUS</p>
+      <h2 id="status">Awaiting validation</h2>
+      <div id="result-detail"><p>Enter merchant details and run validation.</p></div>
+    </aside>
+  </main>
+  <script src="validation.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

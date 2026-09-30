@@ -1,0 +1,10 @@
+flowchart LR
+  A[Intake] --> B[Document collection]
+  B --> C{Completeness check}
+  C -- Missing --> B
+  C -- Complete --> D[Risk / exception escalation]
+  D --> E{Authorised compliance decision}
+  E -- Approve --> F[Account activation]
+  E -- Reject --> G[Close and record reason]
+  F --> H[Periodic review]
+  H --> D

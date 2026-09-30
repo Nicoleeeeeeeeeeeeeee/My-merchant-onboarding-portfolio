@@ -1,0 +1,16 @@
+ID,Precondition,Steps,Expected result,Actual result,Status
+TC-001,Form loaded,Submit empty form,INCOMPLETE with 7 missing fields,INCOMPLETE with 7 missing fields,Pass
+TC-002,Form loaded,Enter all fields with valid values and tick all documents,READY_FOR_COMPLETENESS_REVIEW,READY_FOR_COMPLETENESS_REVIEW,Pass
+TC-003,Valid values except email,Enter bad-email and submit,INCOMPLETE with email error,INCOMPLETE with email error,Pass
+TC-004,Valid values except BRN,Enter 7-digit BRN and submit,INCOMPLETE with BRN error,INCOMPLETE with BRN error,Pass
+TC-005,Valid values except BRN,Enter letters in BRN and submit,INCOMPLETE with BRN error,INCOMPLETE with BRN error,Pass
+TC-006,Valid values except volume,Enter 0 and submit,INCOMPLETE with volume error,INCOMPLETE with volume error,Pass
+TC-007,Valid values except volume,Enter negative value and submit,INCOMPLETE with volume error,INCOMPLETE with volume error,Pass
+TC-008,All fields valid,Leave business registration unchecked and submit,DOCUMENTS_OUTSTANDING naming document,DOCUMENTS_OUTSTANDING naming document,Pass
+TC-009,All fields valid,Leave ownership unchecked and submit,DOCUMENTS_OUTSTANDING naming document,DOCUMENTS_OUTSTANDING naming document,Pass
+TC-010,All fields valid,Leave authorisation unchecked and submit,DOCUMENTS_OUTSTANDING naming document,DOCUMENTS_OUTSTANDING naming document,Pass
+TC-011,Valid values with whitespace,Add leading/trailing spaces and submit,Whitespace is ignored for validation,Whitespace is ignored for validation,Pass
+TC-012,Validation result shown,Click Clear,Form and result return to awaiting state,Form and result return to awaiting state,Pass
+TC-013,Form loaded,Use keyboard Tab through controls,All controls reachable in logical order,All controls reachable in logical order,Pass
+TC-014,Form loaded,Resize to mobile width,Single-column layout with no clipped text,Single-column layout with no clipped text,Pass
+TC-015,Valid fields,Tick only two documents and submit,Status remains DOCUMENTS_OUTSTANDING,Status remains DOCUMENTS_OUTSTANDING,Pass
